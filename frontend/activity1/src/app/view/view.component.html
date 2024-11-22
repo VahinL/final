@@ -1,0 +1,11 @@
+<div class="container my-5 py-5 text-center shadow rounded bg-light">
+  <!-- Welcome Message -->
+  <h1 class="welcome-message text-primary fw-bold mb-4" style="font-size: 2.5rem;">
+    WELCOME, {{ data.first_name | uppercase }} {{ data.last_name | uppercase }}
+  </h1>
+
+  <!-- Add Task Button -->
+  <a [routerLink]="['/task', data.id]" class="btn btn-lg btn-primary mt-4 px-5 py-3 add-task-btn">
+    <i class="bi bi-plus-circle me-2"></i> Add Task
+  </a>
+</div>

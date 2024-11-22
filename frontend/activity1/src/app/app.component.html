@@ -1,0 +1,14 @@
+<div class="container text-center">
+  <h1 class="welcome-message">{{ 'WELCOME' | translate }}</h1>
+  <div class="language-buttons">
+    <button (click)="changeLanguage('en')" class="btn btn-danger">English</button>
+    <button (click)="changeLanguage('ml')" class="btn btn-danger">Malayalam</button>
+    <button (click)="changeLanguage('fr')" class="btn btn-danger">French</button>
+  </div>
+
+  <a routerLink="reg" class="btn btn-primary">Register</a> <br>
+  <a routerLink="log" class="btn btn-primary">Login</a>
+</div>
+
+
+<router-outlet></router-outlet>

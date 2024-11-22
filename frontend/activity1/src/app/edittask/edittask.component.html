@@ -1,0 +1,46 @@
+<div *ngIf="obj">
+    <h2>Edit Task</h2>
+    <form #taskForm="ngForm" (ngSubmit)="updatedata(taskForm.value)">
+        <div>
+            <input  type="hidden"
+          name="id"
+          [(ngModel)]="obj.id"
+             class="form-control"
+        />
+        </div>
+      <div>
+        <label for="task_name">Task Name:</label>
+        <input  type="text"
+          name="task_name" class="form-control"
+          [(ngModel)]="obj.task_name"
+        />
+      </div>
+  
+      <div>
+        <input  type="hidden"
+          name="user1_id"
+          [(ngModel)]="obj.user1"  class="form-control"
+        />
+      </div>
+      <!-- Task Description Field -->
+      <div>
+        <label for="task_description">Task Description:</label>
+        <textarea  name="task_description"  class="form-control" [(ngModel)]="obj.task_description"
+          
+        ></textarea>
+      </div>
+  
+      <!-- Status Field -->
+      <div>
+        <label for="status">Status:</label>
+        <select id="status" name="status" [(ngModel)]="obj.status">
+          <option value="0">Incomplete</option>
+          <option value="1">Complete</option>
+        </select>
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit">Update Task</button>
+    </form>
+  </div>
+ 

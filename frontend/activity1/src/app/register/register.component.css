@@ -1,0 +1,11 @@
+.card {
+  border-radius: 8px;
+}
+
+.text-primary {
+  font-weight: 600;
+}
+
+.btn-primary {
+  font-size: 1.1rem;
+}
